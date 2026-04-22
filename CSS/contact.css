@@ -1,0 +1,26 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+
+}
+.box1{
+    display: flex;
+    gap:1rem;
+    
+}
+
+.search-bar {
+    display: flex;
+    /* border: 2px solid red; */
+    background-color: aqua;
+    max-height: 2rem;
+    width: 13rem;
+}
+.search-bar input{
+    
+    border: none;
+}
+.search-bar button{
+    border: none;
+    background-color:rgb(90, 86, 86) ;
+}
