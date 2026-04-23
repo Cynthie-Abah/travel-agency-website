@@ -1,0 +1,564 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #1f2933;
+  background-color: #f8fafc;
+  line-height: 1.6;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: min(1120px, 90%);
+  margin: 0 auto;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-heading h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.2rem;
+  color: #0b1c2d;
+  margin-bottom: 12px;
+}
+
+.section-heading p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #52606d;
+  font-size: 1rem;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #c6a75e, #e0c27a);
+  color: #0b1c2d;
+  box-shadow: 0 10px 24px rgba(198, 167, 94, 0.35);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 14px 30px rgba(198, 167, 94, 0.45);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* =========================
+   HEADER / NAVBAR
+========================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(11, 28, 45, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.navbar {
+  width: min(1120px, 90%);
+  margin: 0 auto;
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.logo span {
+  color: #c6a75e;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #c6a75e;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 0%;
+  height: 2px;
+  background-color: #c6a75e;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  min-height: 92vh;
+  background:
+    linear-gradient(rgba(11, 28, 45, 0.55), rgba(11, 28, 45, 0.68)),
+    url("../images/hero.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  width: 100%;
+}
+
+.hero-content {
+  width: min(1120px, 90%);
+  margin: 0 auto;
+  color: #ffffff;
+  max-width: 700px;
+  padding: 60px 0;
+}
+
+.hero-tag {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #f3e4b5;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  font-size: 0.95rem;
+}
+
+.hero h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(2.4rem, 6vw, 4.8rem);
+  line-height: 1.1;
+  margin-bottom: 18px;
+}
+
+.hero-text {
+  font-size: 1.08rem;
+  max-width: 620px;
+  color: #e5e7eb;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* =========================
+   INTRO
+========================= */
+.intro {
+  background-color: #ffffff;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.intro-card {
+  background: #ffffff;
+  padding: 28px 24px;
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+  border: 1px solid #eef2f7;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 34px rgba(15, 23, 42, 0.1);
+}
+
+.intro-card h3 {
+  font-family: "Montserrat", sans-serif;
+  color: #0b1c2d;
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+.intro-card p {
+  color: #52606d;
+}
+
+/* =========================
+   FEATURED DESTINATIONS
+========================= */
+.featured-destinations {
+  background: linear-gradient(to bottom, #f8fafc, #eef4f8);
+}
+
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.destination-card {
+  background-color: #ffffff;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.destination-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.14);
+}
+
+.destination-card img {
+  height: 260px;
+  object-fit: cover;
+}
+
+.destination-content {
+  padding: 22px 22px 26px;
+}
+
+.destination-content h3 {
+  font-family: "Montserrat", sans-serif;
+  color: #0b1c2d;
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+}
+
+.destination-content p {
+  color: #52606d;
+}
+
+/* =========================
+   WHY CHOOSE US
+========================= */
+.why-choose-us {
+  background-color: #ffffff;
+}
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.reason-card {
+  background: linear-gradient(180deg, #0b1c2d, #132c45);
+  color: #ffffff;
+  padding: 30px 22px;
+  border-radius: 18px;
+  box-shadow: 0 14px 28px rgba(11, 28, 45, 0.14);
+  transition: transform 0.3s ease;
+}
+
+.reason-card:hover {
+  transform: translateY(-5px);
+}
+
+.reason-card h3 {
+  font-family: "Montserrat", sans-serif;
+  color: #f3d58b;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.reason-card p {
+  color: #d7dee7;
+}
+
+/* =========================
+   TESTIMONIALS
+========================= */
+.testimonials {
+  background: #f8fafc;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.testimonial-card {
+  background-color: #ffffff;
+  padding: 30px 24px;
+  border-radius: 18px;
+  border-left: 5px solid #c6a75e;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.07);
+}
+
+.quote {
+  font-style: italic;
+  color: #52606d;
+  margin-bottom: 18px;
+}
+
+.testimonial-card h4 {
+  font-family: "Montserrat", sans-serif;
+  color: #0b1c2d;
+  font-size: 1rem;
+}
+
+/* =========================
+   CTA
+========================= */
+.cta {
+  background: linear-gradient(135deg, #0b1c2d, #16324c);
+}
+
+.cta-box {
+  text-align: center;
+  color: #ffffff;
+}
+
+.cta-box h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 14px;
+}
+
+.cta-box p {
+  max-width: 700px;
+  margin: 0 auto 26px;
+  color: #d8e2ec;
+  font-size: 1.05rem;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.site-footer {
+  background-color: #07131f;
+  color: #c8d2dc;
+  padding: 28px 0;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-content p:first-child {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 1023px) {
+  .section {
+    padding: 70px 0;
+  }
+
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+    padding: 16px 0;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .hero {
+    min-height: 80vh;
+  }
+
+  .hero-content {
+    text-align: center;
+    max-width: 760px;
+  }
+
+  .hero-text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .intro-grid,
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .reasons-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 767px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-heading h2 {
+    font-size: 1.8rem;
+  }
+
+  .navbar {
+    min-height: auto;
+  }
+
+  .logo a {
+    font-size: 1.05rem;
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    min-height: 72vh;
+    background-position: center;
+  }
+
+  .hero-content {
+    padding: 50px 0;
+  }
+
+  .hero-tag {
+    font-size: 0.85rem;
+  }
+
+  .hero-text {
+    font-size: 0.98rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .intro-grid,
+  .destinations-grid,
+  .reasons-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .destination-card img {
+    height: 220px;
+  }
+
+  .intro-card,
+  .reason-card,
+  .testimonial-card {
+    padding: 24px 20px;
+  }
+
+  .cta-box h2 {
+    font-size: 1.8rem;
+  }
+
+  .cta-box p {
+    font-size: 0.98rem;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+@media (max-width: 480px) {
+  .section-heading h2 {
+    font-size: 1.55rem;
+  }
+
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero-text {
+    font-size: 0.95rem;
+  }
+
+  .destination-card img {
+    height: 200px;
+  }
+}
