@@ -1,5 +1,11 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 nav{
-    display: flex;
+    display: none;
     justify-content: space-between;
 
 }
@@ -25,20 +31,36 @@ nav{
     background-color:rgb(90, 86, 86) ;
 }
 
+
+
 .test {
+    /* i will use this for mobile respon */
+    
   display: flex;
+  
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
+  max-width:100%;
+  width:100%;
+  
 }
 .contact {
+    gap: 2rem;
+    padding: 1rem;
   background-color: aqua;
   height: auto;
+  width:40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
 }
 .form-div  {
   background-color: blue;
   height: auto;
-  padding:2rem;
+  padding:1rem;
+  width: 45%;
 
 }
 .form-div form{
@@ -46,3 +68,80 @@ nav{
     flex-direction:column;
     gap:1rem;
 }
+ .map{
+    margin:2rem;
+    
+    
+}  
+.contact h2{
+    border:2px solid yellow;
+    background-color: red;
+    border-radius: 15px;
+    margin: 1rem;
+}
+.chat-us{
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    
+}
+.phone{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+button{
+    background-color: aqua;
+    padding:10px;
+}
+.connect{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (max-width: 1024px) {
+    .test {
+    display: flex;
+  
+    }
+}
+
+@media (max-width: 768px) {
+    .test {
+    display: flex;
+    
+   
+    }
+    
+}
+
+
+@media (max-width: 480px) {
+    .test {
+    display: flex;
+    flex-direction: column;
+
+    }
+    .form-div{
+        width: 80%;
+
+    }
+
+ .form-div input,textarea{
+    width:7rem;
+    
+    box-sizing: border-box;
+
+}
+
+    
+}
+
