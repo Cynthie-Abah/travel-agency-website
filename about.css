@@ -1,0 +1,127 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+
+}
+/* HERO SECTION */
+.about-hero {
+    background: url('/HTML/images.html/man\ with\ travel\ documents.jpg');
+    background-size: contain;
+    background-position: center;
+    height: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 100px;
+}
+
+.hero-content p {
+    font-size: 40px;
+}
+
+/* COMPANY HISTORY */
+.company-history {
+    font-size: 100%;
+    font-weight: 600;
+    padding: 10px;
+    text-align: center;
+}
+
+.company-history h2 {
+    margin-bottom: 20px;
+}
+
+.company-history p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+/* WHY US */
+.why-us {
+    padding: 60px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.value-card {
+    background: #f4f4f4;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+/* TEAM */
+.team {
+    padding: 60px;
+    text-align: center;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+.team-card img {
+    width: 50%;
+    border-radius: 15px;
+}
+
+/* STATS */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    background: #0A2540;
+    color: white;
+    padding: 2%;
+    border-radius: 90px;
+}
+
+.stat-box h2 {
+    font-size: 60px;
+}
+
+/* AWARDS */
+.awards {
+    padding: 60px;
+    text-align: center;
+}
+
+.awards ul {
+    list-style: none;
+}
+
+.awards li {
+    margin: 15px 0;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+.values-grid,
+.team-grid{
+grid-template-columns:1fr;
+}
+
+.stats{
+flex-direction:column;
+text-align:center;
+gap:20px;
+}
+
+.hero-content h1{
+font-size:50px;
+}
+
+}
