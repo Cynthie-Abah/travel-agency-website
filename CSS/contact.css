@@ -4,34 +4,81 @@
     box-sizing: border-box;
 }
 
-nav{
-    display: none;
-    justify-content: space-between;
-
-}
-.box1{
-    display: flex;
-    gap:1rem;
-    
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(11, 28, 45, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
-.search-bar {
-    display: flex;
-    /* border: 2px solid red; */
-    background-color: aqua;
-    max-height: 2rem;
-    width: 13rem;
+.navbar {
+  width: min(1120px, 90%);
+  margin: 0 auto;
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.search-bar input{
-    
-    border: none;
+
+.logo a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  text-decoration: none;
 }
-.search-bar button{
-    border: none;
-    background-color:rgb(90, 86, 86) ;
+
+.logo span {
+  color: #c6a75e;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+   list-style: none;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #c6a75e;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 0%;
+  height: 2px;
+  background-color: #c6a75e;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
 }
 
 
+.body {
+  /* font-family: "Open Sans", sans-serif; */
+  color: #1f2933;
+  background-color: #f8fafc;
+  line-height: 1.6;
+}
 
 .test {
     /* i will use this for mobile respon */
@@ -45,10 +92,15 @@ nav{
   width:100%;
   
 }
+ .nav-button{
+        display: none;
+    }
 .contact {
+    margin: 1rem;
     gap: 2rem;
     padding: 1rem;
-  background-color: aqua;
+  background-color: #0b1c2d;
+  color: white;
   height: auto;
   width:40%;
   display: flex;
@@ -57,7 +109,8 @@ nav{
   /* align-items: center; */
 }
 .form-div  {
-  background-color: blue;
+  background-color:#0b1c2d;
+  color: white;
   height: auto;
   padding:1rem;
   width: 45%;
@@ -70,14 +123,18 @@ nav{
 }
  .map{
     margin:2rem;
-    
+       
     
 }  
 .contact h2{
-    border:2px solid yellow;
-    background-color: red;
+    /* border:2px solid #cbd0d4; */
+    background-color:#52606d;
     border-radius: 15px;
     margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    
 }
 .chat-us{
  
@@ -96,8 +153,14 @@ nav{
     gap: 0.5rem;
 }
 button{
-    background-color: aqua;
+    color: white;
+    background-color: #0b1c2d;
     padding:10px;
+}
+button:hover{
+    background-color: #c6a75e;
+    color: black;
+    
 }
 .connect{
     display: flex;
@@ -105,12 +168,34 @@ button{
     justify-content: center;
     align-items: center;
 }
+.site-footer {
+  background-color: #07131f;
+  color: #c8d2dc;
+  padding: 28px 0;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-content p:first-child {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
 
 
-@media (max-width: 1024px) {
+@media (max-width: 1284px) {
     .test {
     display: flex;
   
+    }
+    .nav-button{
+        display: none;
+    }
+    .map{
+        display:flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -120,14 +205,61 @@ button{
     
    
     }
+     .map{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+     .nav-button{
+        display: none;
+    }
     
 }
 
 
 @media (max-width: 480px) {
+
+    .navbar {
+    min-height: auto;
+  }
+
+  .logo a {
+    font-size: 1.05rem;
+  }
+
+  .nav-links {
+    display: none;
+    gap: 12px;
+  }
+   .nav-button{
+        display: flex;
+    }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+  .menu:hover .nav-links{
+    display: flex;
+    flex-direction: column;
+    top: 2.5rem;
+    right: 1rem;
+    position: absolute;
+    height: 10rem;
+    width: 6.8rem;
+    padding: 1rem;
+   
+    background-color: rgba(11, 28, 45, 0.95);
+  }
+
     .test {
     display: flex;
     flex-direction: column;
+    
+    
+    }
+    .contact{
+        width: auto;
+        
 
     }
     .form-div{
