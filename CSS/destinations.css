@@ -4,6 +4,15 @@
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #1f2933;
+  background-color: #f8fafc;
+  line-height: 1.6;
+}
 .hero {
   position: relative;
   margin: 1rem auto;
@@ -19,6 +28,69 @@
   justify-content: center;
   align-items: center;
   border-radius: 1rem;
+}
+
+/* =========================
+   HEADER / NAVBAR
+========================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(11, 28, 45, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+.navbar {
+  width: min(1120px, 90%);
+  margin: 0 auto;
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+a {
+  text-decoration: none;
+}
+.logo a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+.logo span {
+  color: #c6a75e;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.nav-links a {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  color: #c6a75e;
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 0%;
+  height: 2px;
+  background-color: #c6a75e;
+  transition: width 0.3s ease;
+}
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
 }
 .hero::before {
   content: "";
@@ -47,11 +119,9 @@
   padding: 2rem;
 }
 .destination-card {
-  /* width: 22rem; */
-  /* min-width: 20rem; */
   min-width: 100%;
   max-width: 35rem;
-  background-color: #fbfbfb;
+  background-color: #fff;
   border-radius: 1.2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition:
@@ -86,7 +156,7 @@
   font-size: 0.93rem;
   font-weight: 600;
   letter-spacing: 0.5px;
-  color: #d63d0e;
+  color: #8b4513;
 }
 .destination-info h3 {
   font-family: "Montserrat", sans-serif;
@@ -96,6 +166,7 @@
   padding: 0.5rem 1rem;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 0.5rem;
 }
 .destination-info p {
@@ -114,26 +185,44 @@
 }
 .destination-card button {
   outline: none;
-  background-color: #3166fa;
+  background: linear-gradient(135deg, #c6a75e, #e0c27a);
   border: none;
   width: fit-content;
-  color: #ffffff;
-  padding: 0.5rem 1rem;
-  font-weight: 500;
+  color: rgba(11, 28, 45, 0.95);
+  padding: 0.7rem 1rem;
+  font-weight: 600;
   letter-spacing: 0.3px;
   text-transform: capitalize;
   border-radius: 20px;
   margin: 0.5rem 0;
   font-size: 0.85rem;
   transition: all linear 0.3s;
-  border: 2px solid #3166fa;
   font-family: "Open Sans", sans-serif;
   cursor: pointer;
+  box-shadow: 0 10px 24px rgba(198, 167, 94, 0.35);
 }
 .destination-card button:hover {
-  background-color: #ffffff;
-  color: #3166fa;
-  transform: scale(1.02);
+  transform: scale(1.03);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(198, 167, 94, 0.45);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.site-footer {
+  background-color: #07131f;
+  color: #c8d2dc;
+  padding: 28px 0;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-content p:first-child {
+  margin-bottom: 8px;
+  font-weight: 600;
 }
 
 @media (max-width: 900px) {
