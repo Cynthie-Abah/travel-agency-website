@@ -99,14 +99,24 @@
     margin: 1rem;
     gap: 2rem;
     padding: 1rem;
-  background-color: #0b1c2d;
+  /* background-color: #0b1c2d; */
   color: white;
   height: auto;
   width:40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
+  background-image:url("../images/contact\ us.webp") ;
+  background-size: cover;
+  background-position: center;
+}
+.contact img{
+  /* display: flex;
+  justify-content: center;
+  align-self: center; */
+  height: 40rem;
+  width: 100%;
 }
 .form-div  {
   background-color:#0b1c2d;
@@ -128,7 +138,7 @@
 }  
 .contact h2{
     /* border:2px solid #cbd0d4; */
-    background-color:#52606d;
+    /* background-color:#52606d; */
     border-radius: 15px;
     margin: 1rem;
     display: flex;
@@ -183,8 +193,12 @@ button:hover{
   font-weight: 600;
 }
 
-
-@media (max-width: 1284px) {
+.contact p{
+  display: flex;
+      justify-content: center;
+      align-items: center;
+}
+@media (max-width: 1300px) {
     .test {
     display: flex;
   
@@ -193,9 +207,9 @@ button:hover{
         display: none;
     }
     .map{
-        display:flex;
-        justify-content: center;
-        align-items: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 }
 
@@ -204,11 +218,6 @@ button:hover{
     display: flex;
     
    
-    }
-     .map{
-        display:flex;
-        justify-content: center;
-        align-items: center;
     }
      .nav-button{
         display: none;
