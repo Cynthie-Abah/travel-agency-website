@@ -1,26 +1,288 @@
-nav{
-    display: flex;
-    justify-content: space-between;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(11, 28, 45, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.navbar {
+  width: min(1120px, 90%);
+  margin: 0 auto;
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #c6a75e;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+   list-style: none;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #c6a75e;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 0%;
+  height: 2px;
+  background-color: #c6a75e;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+
+.body {
+  /* font-family: "Open Sans", sans-serif; */
+  color: #1f2933;
+  background-color: #f8fafc;
+  line-height: 1.6;
+}
+
+.test {
+    /* i will use this for mobile respon */
+    
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  max-width:100%;
+  width:100%;
+  
+}
+ .nav-button{
+        display: none;
+    }
+.contact {
+    margin: 1rem;
+    gap: 2rem;
+    padding: 1rem;
+  /* background-color: #0b1c2d; */
+  color: white;
+  height: auto;
+  width:40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image:url("../images/contact\ us.webp") ;
+  background-size: cover;
+  background-position: center;
+}
+.contact img{
+  /* display: flex;
+  justify-content: center;
+  align-self: center; */
+  height: 40rem;
+  width: 100%;
+}
+.form-div  {
+  background-color:#0b1c2d;
+  color: white;
+  height: auto;
+  padding:1rem;
+  width: 45%;
 
 }
-.box1{
-    display: flex;
+.form-div form{
+    display:flex;
+    flex-direction:column;
     gap:1rem;
+}
+ .map{
+    margin:2rem;
+       
+    
+}  
+.contact h2{
+    /* border:2px solid #cbd0d4; */
+    /* background-color:#52606d; */
+    border-radius: 15px;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    
+}
+.chat-us{
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    
+}
+.phone{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+button{
+    color: white;
+    background-color: #0b1c2d;
+    padding:10px;
+}
+button:hover{
+    background-color: #c6a75e;
+    color: black;
+    
+}
+.connect{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.site-footer {
+  background-color: #07131f;
+  color: #c8d2dc;
+  padding: 28px 0;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-content p:first-child {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.contact p{
+  display: flex;
+      justify-content: center;
+      align-items: center;
+}
+@media (max-width: 1300px) {
+    .test {
+    display: flex;
+  
+    }
+    .nav-button{
+        display: none;
+    }
+    .map{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .test {
+    display: flex;
+    
+   
+    }
+     .nav-button{
+        display: none;
+    }
     
 }
 
-.search-bar {
+
+@media (max-width: 480px) {
+
+    .navbar {
+    min-height: auto;
+  }
+
+  .logo a {
+    font-size: 1.05rem;
+  }
+
+  .nav-links {
+    display: none;
+    gap: 12px;
+  }
+   .nav-button{
+        display: flex;
+    }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+  .menu:hover .nav-links{
     display: flex;
-    /* border: 2px solid red; */
-    background-color: aqua;
-    max-height: 2rem;
-    width: 13rem;
-}
-.search-bar input{
+    flex-direction: column;
+    top: 2.5rem;
+    right: 1rem;
+    position: absolute;
+    height: 10rem;
+    width: 6.8rem;
+    padding: 1rem;
+   
+    background-color: rgba(11, 28, 45, 0.95);
+  }
+
+    .test {
+    display: flex;
+    flex-direction: column;
     
-    border: none;
+    
+    }
+    .contact{
+        width: auto;
+        
+
+    }
+    .form-div{
+        width: 80%;
+
+    }
+
+ .form-div input,textarea{
+    width:7rem;
+    
+    box-sizing: border-box;
+
 }
-.search-bar button{
-    border: none;
-    background-color:rgb(90, 86, 86) ;
+
+    
 }
+
