@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    font-family: "Open Sans", sans-serif;
+    color: #1f2933;
+    background-color: #f8fafc;
+    
+}
+
+/* HERO SECTION */
+.hero {
+  height: 60vh;
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  background: rgba(0,0,0,0.5);
+  padding: 15px 30px;
+  border-radius: 10px;
+}
+
+
+/* package section */
+.packages {
+    padding:50px 20px;
+}
+
+.packages h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+/* grid layout */
+.package-container {
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+/*card*/
+.card {
+    background-color:white; 
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* most popular*/
+.popular {
+    border:2px solid #e0c27a;
+}
+
+.popular::before {
+    content: "Most popular";
+    position:absolute;
+    top:-12px;
+    left: 50px;
+    transform: translateX(-50%);
+    background: #e0c27a;
+    color:black;
+    padding: 5px 12px;
+    font-size: 0.8rem;
+    border-radius: 20px;
+}
+
+/* price*/
+.price {
+    font-size: 2rem;
+    color: black;
+    margin: 15px 0;
+    font-weight: 600;
+}
+
+.price-per-person{
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    
+
+}
+
+/* list */
+ul {
+    list-style: none;
+    margin:20px 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li::before {
+    content:"✔";
+    color: green;
+    margin-right: 8px;
+}
+
+/* button */
+button {
+    padding: 12px 25px;
+    border: none;
+    background: rgba(11, 28, 45, 0.95);
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition:0.3s
+}
+
+button:hover {
+    background: #e66900;
+}
+/* responsive text */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
