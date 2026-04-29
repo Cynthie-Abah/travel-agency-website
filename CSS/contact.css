@@ -145,7 +145,13 @@ input{
   width: 100%;
   max-width: 400px;
   font-family:"Montserrat", sans-serif;
+  
 
+}
+input:focus{
+  outline: none;
+  border-color: rgba(198, 167, 94, 0.45);
+  
 }
  .map{
     margin:2rem;
@@ -207,6 +213,20 @@ button:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+textarea{
+  width: 50%;
+  font-family: "Montserrat", sans-serif;
+}
+textarea:focus{
+  outline: none;
+  border-color: rgba(198, 167, 94, 0.45);
+  
+}
+option{
+  background-color:rgba(11, 28, 45, 0.95) ;
+  color: white;
+  font-family: "Montserrat", sans-serif;
 }
 .site-footer {
   background-color:rgba(11, 28, 45, 0.95);
