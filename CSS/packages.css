@@ -335,12 +335,9 @@ button:hover {
     z-index: 999;
   }
 
-  /* show menu when clicked */
   #menu-toggle:checked ~ .nav-links {
     display: flex;
   }
-
-  /* hide book button on mobile (optional) */
   .navbar .btn-secondary {
     display: none;
   }

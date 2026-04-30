@@ -603,16 +603,6 @@ ul {
   .section {
     padding: 70px 0;
   }
-  .logo a {
-    font-size: 1rem;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-
   .hero {
     min-height: 80vh;
   }
@@ -639,10 +629,15 @@ ul {
   .reasons-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .btn {
+    padding: 5px 10px;
+    font-weight: 600;
+    font-size: 0.7rem;
+  }
   .logo a {
     font-size: 1rem;
   }
-  .btn {
+  .navbar .btn-secondary {
     padding: 5px 10px;
     font-weight: 600;
     font-size: 0.7rem;
