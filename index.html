@@ -9,7 +9,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>WANDERNEST Travels | Explore the World in Style</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,6 +19,8 @@
     />
     <!-- montserrat for headings -->
     <!-- open sans for text -->
+
+    <script src="https://kit.fontawesome.com/b3007debfa.js" crossorigin="anonymous"></script>
   </head>
   <body></body>
 </html>
@@ -42,14 +45,20 @@
         <div class="logo">
           <a href="index.html">WANDERNEST <span>TRAVELS</span></a>
         </div>
+       
+
+  <label for="menu-toggle" class="menu-icon">
+  </label>
 
         <ul class="nav-links">
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="/pages/destinations.html">Destinations</a></li>
           <li><a href="packages.html">Packages</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="/pages/about.html">About Us</a></li>
+          <li><a href="/pages/contact.html">Contact</a></li>
         </ul>
+
+          <a href="contact.html" class="nav-btn">Book Now</a>
       </nav>
     </header>
 
@@ -61,18 +70,21 @@
             <p class="hero-tag">
               Luxury Travel • Global Destinations • Premium Experiences
             </p>
-            <h1>Explore the World in Luxury</h1>
+            <h1>Explore the World in Luxury Beyond Your Imagination</h1>
             <p class="hero-text">
               At WANDERNEST Travels, we create unforgettable journeys for
               travelers who want comfort, elegance, adventure, and memories that
               last a lifetime.
+
+              Plan unforgettable vacations with us — your trusted partner for luxury escapes,
+          adventure tours, family holidays, and dream destinations across the globe.
             </p>
 
             <div class="hero-buttons">
-              <a href="destinations.html" class="btn btn-primary"
+              <a href="/pages/destinations.html" class="btn btn-primary"
                 >Explore Destinations</a
               >
-              <a href="packages.html" class="btn btn-secondary"
+              <a href="/pages/packages.html" class="btn btn-secondary"
                 >View Packages</a
               >
             </div>
@@ -121,66 +133,107 @@
       </section>
 
       <!-- FEATURED DESTINATIONS -->
-      <section class="featured-destinations section">
+      <section class="featured section-padding">
         <div class="container">
           <div class="section-heading">
+             <p class="section-label"></p>
             <h2>Featured Destinations</h2>
-            <p>Discover some of our most popular and inspiring destinations.</p>
+            <p>Discover some of our most popular and inspiring handpicked destinations loved by travelers around the world.</p>
           </div>
 
           <div class="destinations-grid">
-            <article class="destination-card">
-              <img src="images/paris.jpg" alt="Eiffel Tower in Paris, France" />
-              <div class="destination-content">
-                <h3>Paris, France</h3>
-                <p>
-                  Experience romance, culture, iconic landmarks, and
-                  unforgettable city views in the heart of Europe.
-                </p>
-              </div>
-            </article>
+           <!-- first destination -->
+      <div class="destination-card">
+        <!-- destination image -->
+        <figure class="destination-img">
+          <img
+            src="/images/eiffel-tower.jpg"
+            alt="Eiffel Tower, France"
+            loading="lazy"
+          />
+          <!-- destination location -->
+          <figcaption class="location">
+            <i class="fa-solid fa-location-dot"></i>
+            <span> Paris, France</span>
+          </figcaption>
+        </figure>
 
-            <article class="destination-card">
-              <img
-                src="images/bali.jpg"
-                alt="Beautiful beach and resort in Bali, Indonesia"
-              />
-              <div class="destination-content">
-                <h3>Bali, Indonesia</h3>
-                <p>
-                  Relax in paradise with tropical beaches, luxury resorts, rich
-                  culture, and peaceful island adventures.
-                </p>
-              </div>
-            </article>
+        <!-- destination information -->
+        <div class="destination-info">
+          <h3>Eiffel Tower & Historic Districts, France</h3>
+          <p>
+            Experience the ultimate city of romance and art. Walk through the
+            historic halls of the Louvre, enjoy world-class dining in Le Marais,
+            and watch the city lights twinkle from a Seine River cruise.
+          </p>
+          <!-- staring price -->
+          <div class="pricing">Starting from <strong>$1,299</strong></div>
+          <!-- cta btn -->
+          <button>learn more</button>
+        </div>
+      </div>
 
-            <article class="destination-card">
-              <img
-                src="images/dubai.jpg"
-                alt="Modern city skyline in Dubai, UAE"
-              />
-              <div class="destination-content">
-                <h3>Dubai, UAE</h3>
-                <p>
-                  Enjoy a perfect mix of luxury shopping, desert experiences,
-                  modern architecture, and premium hospitality.
-                </p>
-              </div>
-            </article>
+      <!-- second destination -->
+      <div class="destination-card">
+        <!-- destination image -->
+        <figure class="destination-img">
+          <img
+            src="/images/uluwatu-temple.jpg"
+            alt="Uluwatu Temple, Indonesia"
+            loading="lazy"
+          />
+          <!-- destination location -->
+          <figcaption class="location">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Bali, Indonesia</span>
+          </figcaption>
+        </figure>
 
-            <article class="destination-card">
-              <img
-                src="images/capetown.jpg"
-                alt="Scenic coastal view in Cape Town, South Africa"
-              />
-              <div class="destination-content">
-                <h3>Cape Town, South Africa</h3>
-                <p>
-                  Explore breathtaking mountains, vibrant culture, ocean views,
-                  and amazing nature in one destination.
-                </p>
-              </div>
-            </article>
+        <!-- destination information -->
+        <div class="destination-info">
+          <h3>Ubud Jungle & Sacred Temples, Indonesia</h3>
+          <p>
+            A tropical paradise that blends spiritual heritage with breathtaking
+            nature. Relax in private jungle villas in Ubud, surf the turquoise
+            waves of Uluwatu, and explore ancient water temples.
+          </p>
+          <!-- staring price -->
+          <div class="pricing">Starting from <strong>$899</strong></div>
+          <!-- cta btn -->
+          <button>learn more</button>
+        </div>
+      </div>
+
+      <!-- third destination -->
+      <div class="destination-card">
+        <!-- destination image -->
+        <figure class="destination-img">
+          <img
+            src="/images/shinjuku-tokyo.jpg"
+            alt=" Shinjuku Skyline & Imperial Gardens, Japan"
+            loading="lazy"
+          />
+          <!-- destination location -->
+          <figcaption class="location">
+            <i class="fa-solid fa-location-dot"></i> <span>Tokyo, Japan</span>
+          </figcaption>
+        </figure>
+
+        <!-- destination information -->
+        <div class="destination-info">
+          <h3>Shinjuku Skyline & Imperial Gardens, Japan</h3>
+          <p>
+            Discover a mesmerizing blend of futuristic technology and
+            deep-rooted tradition. From the high-speed energy of Shibuya
+            Crossing to the quiet beauty of Meiji Shrine, Tokyo is a feast for
+            the senses.
+          </p>
+          <!-- staring price -->
+          <div class="pricing">Starting from <strong>$1,499</strong></div>
+          <!-- cta btn -->
+          <button>learn more</button>
+        </div>
+      </div>
           </div>
         </div>
       </section>
@@ -195,14 +248,16 @@
 
           <div class="reasons-grid">
             <article class="reason-card">
+               <i class="fa-solid fa-paper-plane"></i>
               <h3>Expert Planning</h3>
               <p>
                 Our team carefully plans every detail of your trip to ensure
                 comfort, convenience, and satisfaction.
-              </p>
+              </p>      
             </article>
 
             <article class="reason-card">
+              <i class="fa-solid fa-ship"></i>
               <h3>Affordable Luxury</h3>
               <p>
                 We provide exceptional travel experiences with packages that
@@ -211,6 +266,7 @@
             </article>
 
             <article class="reason-card">
+              <i class="fa-solid fa-hotel"></i>
               <h3>Trusted Support</h3>
               <p>
                 From booking to arrival, our support team is available to guide
@@ -219,6 +275,7 @@
             </article>
 
             <article class="reason-card">
+              <i class="fa-solid fa-globe"></i>
               <h3>Global Destinations</h3>
               <p>
                 We connect you to top destinations across Europe, Asia, Africa,
@@ -260,12 +317,13 @@
                 destinations. I highly recommend WANDERNEST Travels.”
               </p>
               <h4>— Osaro Miracle.</h4>
+        </div>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- CALL TO ACTION -->
+       <!-- CALL TO ACTION -->
       <section class="cta section">
         <div class="container cta-box">
           <h2>Ready to Plan Your Dream Vacation?</h2>
@@ -276,10 +334,12 @@
           <a href="contact.html" class="btn btn-primary">Start Your Journey</a>
         </div>
       </section>
+      
     </main>
 
     <!-- FOOTER -->
-    <footer class="site-footer">
+    <footer class="site-footer">    
+
       <div class="container footer-content">
         <p>&copy; 2026 WANDERNEST Travels. All rights reserved.</p>
         <p>
