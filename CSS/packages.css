@@ -4,9 +4,9 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
-/* header */
 a {
   text-decoration: none;
+  color: inherit;
 }
 .site-header {
   position: sticky;
@@ -18,12 +18,12 @@ a {
 }
 
 .navbar {
-  width: min(1180px, 90%);
-  padding: 18px 24px;
-  min-height: 78px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 16px 1rem;
+  width: 100%;
+  gap: 1rem;
 }
 
 .logo a {
@@ -34,15 +34,15 @@ a {
   letter-spacing: 0.5px;
 }
 
-.logo span,
-.footer span {
+.logo span {
   color: #c6a75e;
 }
 
+/* NAV LINKS (DESKTOP) */
 .nav-links {
   display: flex;
-  list-style: none;
   align-items: center;
+  list-style: none;
   gap: 28px;
 }
 
@@ -75,27 +75,30 @@ a {
   width: 100%;
 }
 
-.btn {
-  display: inline-block;
-  padding: 14px 28px;
-  border-radius: 999px;
-  font-weight: 700;
-  font-size: 0.95rem;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    background 0.3s ease;
-}
-.btn:hover {
-  transform: translateY(-2px);
-}
+/* BUTTON */
 .btn-secondary {
   background-color: transparent;
   color: #ffffff;
   border: 2px solid rgba(255, 255, 255, 0.75);
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 700;
 }
+
 .btn-secondary:hover {
   background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* HAMBURGER */
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
 }
 
 /* end of header */
@@ -292,9 +295,54 @@ button:hover {
 }
 
 /* responsive text */
+@media (max-width: 1023px) {
+  .logo a {
+    font-size: 1rem;
+  }
+  .btn-secondary {
+    padding: 5px 10px;
+    font-weight: 600;
+    font-size: 0.7rem;
+  }
+  .nav-links a {
+    font-size: 0.7rem;
+  }
+}
+
 @media (max-width: 600px) {
   .hero h2 {
     font-size: 3.5rem;
+  }
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: relative;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: rgba(11, 28, 45, 0.98);
+    padding: 1rem;
+    border-radius: 10px;
+    width: 200px;
+    gap: 12px;
+    z-index: 999;
+  }
+
+  /* show menu when clicked */
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+
+  /* hide book button on mobile (optional) */
+  .navbar .btn-secondary {
+    display: none;
   }
 }
 
