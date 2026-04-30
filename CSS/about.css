@@ -1,7 +1,182 @@
 * {
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #1f2933;
+  background-color: #f8fafc;
+  line-height: 1.6;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.about-hero {
+  background: url("../images/man with travel documents.jpg") center/cover
+    no-repeat;
+  width: 90%;
+  max-width: 1100px;
+  height: clamp(12rem, 30vw, 19rem);
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  border-radius: 40px;
+}
+
+.hero-content h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-family: "Montserrat", sans-serif;
+}
+
+.hero-content p {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+/* =========================
+   COMPANY HISTORY
+========================= */
+.company-history {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.company-history h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.history-mission-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.history {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+.history:hover {
+  transform: translateY(-6px);
+}
+
+.history img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.history p {
+  padding: 20px;
+  font-size: 1rem;
+}
+
+/* =========================
+   WHY US
+========================= */
+.why-us {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.value-card {
+  background: #f4f4f4;
+  padding: 25px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================
+   TEAM
+========================= */
+.team {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.team-card img {
+  width: 100%;
+  max-width: 180px;
+  border-radius: 15px;
+}
+
+/* =========================
+   STATS (FIXED DUPLICATION + LAYOUT)
+========================= */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 60px 20px;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+.stat-box {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-5px);
+}
+
+/* =========================
+   AWARDS (FIXED ERRORS)
+========================= */
+.awards {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.award-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }
 .site-header {
   position: sticky;
@@ -13,12 +188,12 @@
 }
 
 .navbar {
-  width: min(1180px, 90%);
-  padding: 18px 24px;
-  min-height: 78px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 16px 1rem;
+  width: 100%;
+  gap: 1rem;
 }
 
 .logo a {
@@ -29,15 +204,15 @@
   letter-spacing: 0.5px;
 }
 
-.logo span,
-.footer span {
+.logo span {
   color: #c6a75e;
 }
 
+/* NAV LINKS (DESKTOP) */
 .nav-links {
   display: flex;
-  list-style: none;
   align-items: center;
+  list-style: none;
   gap: 28px;
 }
 
@@ -70,108 +245,31 @@
   width: 100%;
 }
 
-/* HERO SECTION */
-.about-hero {
-  background: url("/HTML/images.html/man\ with\ travel\ documents.jpg");
-  background-size: contain;
-  background-position: center;
-  height: 50%;
+/* BUTTON */
+.btn-secondary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+}
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
 
+/* HAMBURGER */
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 2rem;
   color: white;
-  text-align: center;
+  cursor: pointer;
 }
-
-.hero-content h1 {
-  font-size: 100px;
-}
-
-.hero-content p {
-  font-size: 40px;
-}
-
-/* COMPANY HISTORY */
-.company-history {
-  font-size: 100%;
-  font-weight: 600;
-  padding: 10px;
-  text-align: center;
-}
-
-.company-history h2 {
-  margin-bottom: 20px;
-}
-
-.company-history p {
-  margin-bottom: 20px;
-  line-height: 1.7;
-}
-
-/* WHY US */
-.why-us {
-  padding: 60px;
-}
-
-.values-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.value-card {
-  background: #f4f4f4;
-  padding: 25px;
-  border-radius: 10px;
-}
-
-/* TEAM */
-.team {
-  padding: 60px;
-  text-align: center;
-}
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-.team-card img {
-  width: 50%;
-  border-radius: 15px;
-}
-
-/* STATS */
-.stats {
-  display: flex;
-  justify-content: space-around;
-  background: #0a2540;
-  color: white;
-  padding: 2%;
-  border-radius: 90px;
-}
-
-.stat-box h2 {
-  font-size: 60px;
-}
-
-/* AWARDS */
-.awards {
-  padding: 60px;
-  text-align: center;
-}
-
-.awards ul {
-  list-style: none;
-}
-
-.awards li {
-  margin: 15px 0;
-}
-
 .site-footer {
   background-color: #07131f;
   color: #c8d2dc;
@@ -222,39 +320,53 @@
   font-weight: 600;
 }
 
-@media (max-width: 1023px) {
-  .navbar {
-    flex-direction: column;
-    justify-content: center;
-    gap: 14px;
-    padding: 16px 0;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 18px;
-  }
-
-  .hero {
-    min-height: 80vh;
-  }
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
+/* =========================
+   RESPONSIVE (ONLY SECTION LAYOUTS)
+========================= */
+@media (max-width: 900px) {
+  .history-mission-grid,
   .values-grid,
   .team-grid {
     grid-template-columns: 1fr;
   }
-
-  .stats {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
+  .logo a {
+    font-size: 1rem;
+  }
+  .btn-secondary {
+    padding: 5px 10px;
+    font-weight: 600;
+    font-size: 0.7rem;
+  }
+  .nav-links a {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 767px) {
+  .menu-icon {
+    display: block;
   }
 
-  .hero-content h1 {
-    font-size: 50px;
+  .navbar {
+    position: relative;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: rgba(11, 28, 45, 0.98);
+    padding: 1rem;
+    border-radius: 10px;
+    width: 200px;
+    gap: 12px;
+    z-index: 999;
+  }
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+  .navbar .btn-secondary {
+    display: none;
   }
 }
