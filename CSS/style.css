@@ -195,7 +195,7 @@ ul {
   min-height: 92vh;
   background:
     linear-gradient(rgba(11, 28, 45, 0.55), rgba(11, 28, 45, 0.68)),
-    url("../capetown.jpg") center/cover no-repeat;
+    url("../images/capetown.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
 }
