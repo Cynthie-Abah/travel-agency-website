@@ -222,6 +222,25 @@
   font-weight: 600;
 }
 
+@media (max-width: 1023px) {
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+    padding: 16px 0;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .hero {
+    min-height: 80vh;
+  }
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .values-grid,

@@ -131,12 +131,13 @@ ul {
 }
 
 .navbar {
-  width: min(1180px, 90%);
-  padding: 18px 24px;
-  min-height: 78px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  padding: 1rem;
+  width: 100%;
+  gap: 1rem;
 }
 
 .logo a {
@@ -583,6 +584,17 @@ ul {
   margin-bottom: 8px;
   font-weight: 600;
 }
+#menu-toggle {
+  display: none;
+}
+
+/* hamburger icon */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
 
 /* =========================
    TABLET
@@ -591,18 +603,14 @@ ul {
   .section {
     padding: 70px 0;
   }
-
-  .navbar {
-    flex-direction: column;
-    justify-content: center;
-    gap: 14px;
-    padding: 16px 0;
+  .logo a {
+    font-size: 1rem;
   }
 
   .nav-links {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 18px;
+    gap: 10px;
   }
 
   .hero {
@@ -631,6 +639,17 @@ ul {
   .reasons-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .logo a {
+    font-size: 1rem;
+  }
+  .btn {
+    padding: 5px 10px;
+    font-weight: 600;
+    font-size: 0.7rem;
+  }
+  .nav-links a {
+    font-size: 0.7rem;
+  }
 }
 
 /* =========================
@@ -639,22 +658,19 @@ ul {
 @media (max-width: 767px) {
   .section {
     padding: 60px 0;
+    width: 100%;
   }
 
   .section-heading h2 {
     font-size: 1.8rem;
   }
 
-  .navbar {
-    min-height: auto;
-  }
-
   .logo a {
     font-size: 1.05rem;
   }
 
-  .nav-links {
-    gap: 12px;
+  .nav-links.active {
+    display: flex;
   }
 
   .nav-links a {
@@ -710,6 +726,37 @@ ul {
 
   .cta-box p {
     font-size: 0.98rem;
+  }
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: rgba(11, 28, 45, 0.98);
+    padding: 1rem;
+    border-radius: 10px;
+    width: 200px;
+    gap: 12px;
+    box-shadow: var(--shadow);
+    z-index: 999;
+  }
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+
+  .navbar .btn.btn-secondary {
+    display: none;
   }
 }
 
