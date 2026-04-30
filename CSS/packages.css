@@ -111,7 +111,7 @@ body {
   position: relative;
   margin: 1rem auto;
   background-color: gray;
-  background-image: url("/images/explore-destination.jpg");
+  background-image: url("../images/explore-destination.jpg");
   background-size: cover;
   background-position: center;
   width: 90%;
