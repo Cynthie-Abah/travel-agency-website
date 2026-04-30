@@ -47,10 +47,6 @@ img {
   display: block;
 }
 
-a {
-  text-decoration: none;
-}
-
 ul {
   list-style: none;
 }
@@ -92,7 +88,10 @@ ul {
   border-radius: 999px;
   font-weight: 700;
   font-size: 0.95rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
 }
 
 .btn:hover {
@@ -189,8 +188,6 @@ ul {
   width: 100%;
 }
 
-
-
 /* =========================
    HERO
 ========================= */
@@ -211,7 +208,7 @@ ul {
   width: min(70%, 90%);
   margin: 0 auto;
   color: #ffffff;
-  max-width: 700px;
+  max-width: 70%;
   padding: 60px 0;
   text-align: center;
 }
@@ -231,10 +228,8 @@ ul {
   line-height: 1.1;
   margin-bottom: 18px;
 }
-
 .hero-text {
   font-size: 1.08rem;
-  max-width: 620px;
   color: #e5e7eb;
   margin-bottom: 30px;
   text-align: center;
@@ -243,6 +238,7 @@ ul {
 .hero-buttons {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 16px;
 }
 
@@ -266,7 +262,9 @@ ul {
   border-radius: 18px;
   box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
   border: 1px solid #eef2f7;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .intro-card:hover {
@@ -299,19 +297,6 @@ ul {
   justify-items: center;
 }
 
-.destination-card {
-  background-color: #ffffff;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.destination-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.14);
-}
-
 .destination-card img {
   height: 260px;
   object-fit: cover;
@@ -330,6 +315,105 @@ ul {
 
 .destination-content p {
   color: #52606d;
+}
+
+.destinations {
+  display: grid;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+.destination-card {
+  min-width: 100%;
+  max-width: 35rem;
+  background-color: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.27s ease,
+    box-shadow 0.27s ease;
+  flex-wrap: wrap;
+}
+.destination-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.12),
+    0 20px 40px rgba(0, 0, 0, 0.08);
+}
+.destination-img {
+  position: relative;
+}
+.destination-img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 1.2rem;
+  border-top-right-radius: 1.2rem;
+}
+.location {
+  position: absolute;
+  bottom: 15px;
+  left: 10px;
+  background: white;
+  border-radius: 20px;
+  text-transform: capitalize;
+  padding: 0.1rem 0.6rem;
+  font-size: 0.93rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #8b4513;
+}
+.destination-info h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+}
+.destination-info {
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.destination-info p {
+  font-size: 0.9rem;
+  color: rgb(72, 72, 72);
+  letter-spacing: 0.3px;
+}
+.pricing {
+  font-size: 0.9rem;
+  color: rgb(72, 72, 72);
+}
+.pricing strong {
+  font-size: 1.4rem;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+.destination-card button {
+  outline: none;
+  background: linear-gradient(135deg, #c6a75e, #e0c27a);
+  border: none;
+  width: fit-content;
+  color: rgba(11, 28, 45, 0.95);
+  padding: 0.7rem 1rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: capitalize;
+  border-radius: 20px;
+  margin: 0.5rem 0;
+  font-size: 0.85rem;
+  transition: all linear 0.3s;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(198, 167, 94, 0.35);
+}
+.destination-card button:hover {
+  transform: scale(1.03);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(198, 167, 94, 0.45);
 }
 
 /* =========================
@@ -357,12 +441,11 @@ ul {
   transition: transform 0.3s ease;
 }
 .reason-card i {
-   color: #f3e4b5;
-   font-size: 3rem;
-   padding: 1rem 0;
+  color: #f3e4b5;
+  font-size: 3rem;
+  padding: 1rem 0;
 }
 .reason-card:hover {
-  background: rgba(255, 255, 255, 0.18);
   transform: translateY(-8px);
 }
 
@@ -370,7 +453,6 @@ ul {
   font-size: 2.4rem;
   margin-bottom: 18px;
 }
-
 
 .reason-card h3 {
   font-family: "Montserrat", sans-serif;
@@ -410,7 +492,6 @@ ul {
   margin-bottom: 20px;
   font-style: italic;
 }
-
 
 .quote {
   font-style: italic;
