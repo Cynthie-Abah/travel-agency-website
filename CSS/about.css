@@ -1,127 +1,241 @@
 * {
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
 }
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(11, 28, 45, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.navbar {
+  width: min(1180px, 90%);
+  padding: 18px 24px;
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.logo span,
+.footer span {
+  color: #c6a75e;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #c6a75e;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 0%;
+  height: 2px;
+  background-color: #c6a75e;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
 /* HERO SECTION */
 .about-hero {
-    background: url('/HTML/images.html/man\ with\ travel\ documents.jpg');
-    background-size: contain;
-    background-position: center;
-    height: 50%;
+  background: url("/HTML/images.html/man\ with\ travel\ documents.jpg");
+  background-size: contain;
+  background-position: center;
+  height: 50%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    color: white;
-    text-align: center;
+  color: white;
+  text-align: center;
 }
 
 .hero-content h1 {
-    font-size: 100px;
+  font-size: 100px;
 }
 
 .hero-content p {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 /* COMPANY HISTORY */
 .company-history {
-    font-size: 100%;
-    font-weight: 600;
-    padding: 10px;
-    text-align: center;
+  font-size: 100%;
+  font-weight: 600;
+  padding: 10px;
+  text-align: center;
 }
 
 .company-history h2 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .company-history p {
-    margin-bottom: 20px;
-    line-height: 1.7;
+  margin-bottom: 20px;
+  line-height: 1.7;
 }
 
 /* WHY US */
 .why-us {
-    padding: 60px;
+  padding: 60px;
 }
 
 .values-grid {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
 .value-card {
-    background: #f4f4f4;
-    padding: 25px;
-    border-radius: 10px;
+  background: #f4f4f4;
+  padding: 25px;
+  border-radius: 10px;
 }
 
 /* TEAM */
 .team {
-    padding: 60px;
-    text-align: center;
+  padding: 60px;
+  text-align: center;
 }
 
 .team-grid {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 
 .team-card img {
-    width: 50%;
-    border-radius: 15px;
+  width: 50%;
+  border-radius: 15px;
 }
 
 /* STATS */
 .stats {
-    display: flex;
-    justify-content: space-around;
-    background: #0A2540;
-    color: white;
-    padding: 2%;
-    border-radius: 90px;
+  display: flex;
+  justify-content: space-around;
+  background: #0a2540;
+  color: white;
+  padding: 2%;
+  border-radius: 90px;
 }
 
 .stat-box h2 {
-    font-size: 60px;
+  font-size: 60px;
 }
 
 /* AWARDS */
 .awards {
-    padding: 60px;
-    text-align: center;
+  padding: 60px;
+  text-align: center;
 }
 
 .awards ul {
-    list-style: none;
+  list-style: none;
 }
 
 .awards li {
-    margin: 15px 0;
+  margin: 15px 0;
+}
+
+.site-footer {
+  background-color: #07131f;
+  color: #c8d2dc;
+  padding: 70px 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 50px;
+  padding-bottom: 50px;
+}
+
+.footer h3 {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+}
+
+.footer h4 {
+  margin-bottom: 16px;
+}
+
+.footer p,
+.footer a {
+  display: block;
+  color: #dce8f7;
+  margin-bottom: 9px;
+  font-size: 0.95rem;
+}
+
+.footer a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: #dce8f7;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-content p:first-child {
+  margin-bottom: 8px;
+  font-weight: 600;
 }
 
 /* RESPONSIVE */
-@media(max-width:768px){
+@media (max-width: 768px) {
+  .values-grid,
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
 
-.values-grid,
-.team-grid{
-grid-template-columns:1fr;
-}
+  .stats {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
 
-.stats{
-flex-direction:column;
-text-align:center;
-gap:20px;
-}
-
-.hero-content h1{
-font-size:50px;
-}
-
+  .hero-content h1 {
+    font-size: 50px;
+  }
 }

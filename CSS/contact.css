@@ -1,21 +1,35 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
 }
+.body {
+  font-family: "Open Sans", sans-serif;
+  color: #1f2933;
+  background-color: #f8fafc;
+  line-height: 1.6;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* header */
 
+a {
+  text-decoration: none;
+}
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 100;
   background-color: rgba(11, 28, 45, 0.95);
   backdrop-filter: blur(8px);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 .navbar {
-  width: min(1120px, 90%);
-  margin: 0 auto;
+  width: min(1180px, 90%);
+  padding: 18px 24px;
   min-height: 78px;
   display: flex;
   align-items: center;
@@ -24,21 +38,21 @@
 
 .logo a {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.45rem;
   font-weight: 800;
   color: #ffffff;
   letter-spacing: 0.5px;
-  text-decoration: none;
 }
 
-.logo span {
+.logo span,
+.footer span {
   color: #c6a75e;
 }
 
 .nav-links {
   display: flex;
+  list-style: none;
   align-items: center;
-   list-style: none;
   gap: 28px;
 }
 
@@ -47,7 +61,6 @@
   font-weight: 600;
   font-size: 0.95rem;
   position: relative;
-  text-decoration: none;
   transition: color 0.3s ease;
 }
 
@@ -71,117 +84,162 @@
 .nav-links a.active::after {
   width: 100%;
 }
-
-
-.body {
-  /* font-family: "Open Sans", sans-serif; */
-  color: #1f2933;
-  background-color: #f8fafc;
-  line-height: 1.6;
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
 }
-
+.btn:hover {
+  transform: translateY(-2px);
+}
+.btn-secondary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+}
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+/* header end */
 .test {
-    /* i will use this for mobile respon */
-    
+  /* i will use this for mobile respon */
+
   display: flex;
-  
+
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  max-width:100%;
-  width:100%;
-  
+  max-width: 100%;
+  width: 100%;
 }
- .nav-button{
-        display: none;
-    }
+.nav-button {
+  display: none;
+}
 .contact {
-    margin: 1rem;
-    gap: 2rem;
-    padding: 1rem;
+  margin: 1rem;
+  gap: 2rem;
+  padding: 1rem;
   /* background-color: #0b1c2d; */
   color: white;
   height: auto;
-  width:40%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image:url("../images/contact\ us.webp") ;
+  background-image: url("../images/contact\ us.webp");
   background-size: cover;
   background-position: center;
 }
-.contact img{
+.contact img {
   /* display: flex;
   justify-content: center;
   align-self: center; */
   height: 40rem;
   width: 100%;
 }
-.form-div  {
-  background-color:#0b1c2d;
+.form-div {
+  background-color: #0b1c2d;
   color: white;
   height: auto;
-  padding:1rem;
+  padding: 1rem;
   width: 45%;
+}
+.form-div form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.map {
+  margin: 2rem;
+}
+.contact h2 {
+  /* border:2px solid #cbd0d4; */
+  /* background-color:#52606d; */
+  border-radius: 15px;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.chat-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+button {
+  color: white;
+  background-color: #0b1c2d;
+  padding: 10px;
+}
+button:hover {
+  background-color: #c6a75e;
+  color: black;
+}
+.connect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-}
-.form-div form{
-    display:flex;
-    flex-direction:column;
-    gap:1rem;
-}
- .map{
-    margin:2rem;
-       
-    
-}  
-.contact h2{
-    /* border:2px solid #cbd0d4; */
-    /* background-color:#52606d; */
-    border-radius: 15px;
-    margin: 1rem;
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    
-}
-.chat-us{
- 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-
-    
-}
-.phone{
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-}
-button{
-    color: white;
-    background-color: #0b1c2d;
-    padding:10px;
-}
-button:hover{
-    background-color: #c6a75e;
-    color: black;
-    
-}
-.connect{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 .site-footer {
   background-color: #07131f;
   color: #c8d2dc;
-  padding: 28px 0;
+  padding: 70px 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 50px;
+  padding-bottom: 50px;
+}
+
+.footer h3 {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+}
+
+.footer h4 {
+  margin-bottom: 16px;
+}
+
+.footer p,
+.footer a {
+  display: block;
+  color: #dce8f7;
+  margin-bottom: 9px;
+  font-size: 0.95rem;
+}
+
+.footer a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: #dce8f7;
 }
 
 .footer-content {
@@ -192,43 +250,31 @@ button:hover{
   margin-bottom: 8px;
   font-weight: 600;
 }
-
-.contact p{
-  display: flex;
-      justify-content: center;
-      align-items: center;
-}
 @media (max-width: 1300px) {
-    .test {
+  .test {
     display: flex;
-  
-    }
-    .nav-button{
-        display: none;
-    }
-    .map{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  }
+  .nav-button {
+    display: none;
+  }
+  .map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media (max-width: 768px) {
-    .test {
+  .test {
     display: flex;
-    
-   
-    }
-     .nav-button{
-        display: none;
-    }
-    
+  }
+  .nav-button {
+    display: none;
+  }
 }
 
-
 @media (max-width: 480px) {
-
-    .navbar {
+  .navbar {
     min-height: auto;
   }
 
@@ -240,14 +286,14 @@ button:hover{
     display: none;
     gap: 12px;
   }
-   .nav-button{
-        display: flex;
-    }
+  .nav-button {
+    display: flex;
+  }
 
   .nav-links a {
     font-size: 0.9rem;
   }
-  .menu:hover .nav-links{
+  .menu:hover .nav-links {
     display: flex;
     flex-direction: column;
     top: 2.5rem;
@@ -256,33 +302,25 @@ button:hover{
     height: 10rem;
     width: 6.8rem;
     padding: 1rem;
-   
+
     background-color: rgba(11, 28, 45, 0.95);
   }
 
-    .test {
+  .test {
     display: flex;
     flex-direction: column;
-    
-    
-    }
-    .contact{
-        width: auto;
-        
+  }
+  .contact {
+    width: auto;
+  }
+  .form-div {
+    width: 80%;
+  }
 
-    }
-    .form-div{
-        width: 80%;
+  .form-div input,
+  textarea {
+    width: 7rem;
 
-    }
-
- .form-div input,textarea{
-    width:7rem;
-    
     box-sizing: border-box;
-
+  }
 }
-
-    
-}
-
